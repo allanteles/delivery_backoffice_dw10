@@ -44,7 +44,7 @@ class MenuButton extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: () => onPressed,
+              onTap: () => onPressed(menu),
               borderRadius: BorderRadius.circular(20),
               child: Container(
                 margin: const EdgeInsets.all(10),

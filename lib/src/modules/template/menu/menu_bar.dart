@@ -13,7 +13,7 @@ class MenuBar extends StatefulWidget {
 }
 
 class _MenuBarState extends State<MenuBar> {
-  Menu? selectedMenu = Menu.paymentType;
+  Menu? selectedMenu;
   var colapsed = false;
 
   @override
@@ -52,7 +52,7 @@ class _MenuBarState extends State<MenuBar> {
               return MenuButton(
                 menu: menu,
                 menuSelected: selectedMenu,
-                onPressed: (value) {
+                onPressed: (menu) {
                   setState(() {
                     selectedMenu = menu;
                     Modular.to.navigate(menu.route);
