@@ -16,7 +16,7 @@ class PaymentTypeRepositoryImpl extends PaymentTypeRepository {
   Future<List<PaymentType>> findAll(bool? enable) async {
     try {
       final paymentType = await _dio.auth().get(
-        '/payment-type',
+        '/payment-types',
         queryParameters: {if (enable != null) 'enable': enable},
       );
       return paymentType.data

@@ -4,13 +4,13 @@ class PaymentType {
   final int? id;
   final String name;
   final String acronym;
-  final bool enable;
+  final bool enabled;
 
   PaymentType({
     this.id,
     required this.name,
     required this.acronym,
-    required this.enable,
+    required this.enabled,
   });
 
   Map<String, dynamic> toMap() {
@@ -21,7 +21,7 @@ class PaymentType {
     }
     result.addAll({'name': name});
     result.addAll({'acronym': acronym});
-    result.addAll({'enable': enable});
+    result.addAll({'enable': enabled});
 
     return result;
   }
@@ -31,7 +31,7 @@ class PaymentType {
       id: map['id']?.toInt(),
       name: map['name'] ?? '',
       acronym: map['acronym'] ?? '',
-      enable: map['enable'] ?? false,
+      enabled: map['enabled'] ?? false,
     );
   }
 
